@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            text-transform: capitalize;
+        }
+
+        header {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 20px;
+        }
+
+        .logo {
+            padding: 10px;
+            margin: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav {
+            padding: 3px 5px;
+            margin: 2px 1px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            /* flex-direction: row; */
+            margin: 5px;
+            padding: 10px 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            padding: 5px;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: azure;
+            padding: 10px;
+            margin: 10px;
+            transition-duration: 0.6s;
+            border-radius: 10px;
+        }
+        
+        a:hover {
+            background-color: rgb(166, 226, 166);
+            color: black;
+        }
+
+        .bgc {
+            color: rgb(17, 250, 199);
+            font-size: 25px;
+            /* font-weight: bold; */
+            background-image: url(Images/bgc1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .bgc>p {
+            font-size: 18px;
+        }
+
+        .bgc>button {
+            text-transform: capitalize;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightcyan;
+            color: lightcoral;
+            border: none;
+            transition: 0.5s ease-in-out, 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: black;
+            color: red;
+            transform: scale(1.1);
+        }
+        section>h1{
+            text-align: center;
+            font-size: 40px;
+            margin-top: 25px;
+        }
+        section .service{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 20px;
+            gap: 20px;
+        }
+        section .service .services{
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            margin: 10px;
+            margin-top: 30px;
+            text-align: center;
+            border: 1px solid rgb(156, 150, 150); 
+            border-radius: 10px;
+            background-color: silver;
+            box-sizing: border-box;
+        }
+        .services>h1{
+            font-size: 25px;
+        }
+        .services p{
+            font-size: 18px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+        .c2{grid-area: one;}
+        .c3{grid-area: two;}
+        .c4{grid-area: three;}
+        section .c1{
+            display:grid ;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: space-between;
+            grid-template-areas: 
+            "one two three";
+        }
+        .c1>div{
+            padding: 15px;
+            margin: 15px;
+            margin-top: 30px;
+            gap: 10px;
+            text-align: center;
+            background-color: silver;
+            border: 1px solid rgb(178, 176, 176);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        footer{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 20px 20px;
+        }
+        footer a{
+            text-decoration: none;
+            color: red;
+            border-radius: 3px;
+            transition-duration: 0.5s;
+        }
+        footer a:hover{
+            background-color: white;
+            color: black ;
+        }
+        @media (max-width:768px) {
+            header {
+                font-size: 25px;
+            }
+            
+            .logo {
+                text-align: left;
+            }
+
+            nav>ul {
+                flex-direction: column;
+                text-align: right;
+            }
+
+            .bgc {
+                font-size: 30px;
+                background-size: cover;
+            }
+
+            .bgc>p {
+                font-size: 17px;
+            }
+            section>h1{
+                font-size: 25px;
+            }
+            .services{
+                flex-direction: column;
+                gap: 15px;
+            }
+            section .c1{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "one one one two two two"
+                "three three three three three three";
+            }
+            
+        }
+
+        @media (max-width:576px) {
+
+            header {
+                /* text-align: center; */
+                flex-direction: column;
+            }
+
+            .logo {
+                text-align: center;
+            }
+
+            nav>ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bgc {
+                font-size: 20px;
+                background-size: cover;
+            }
+
+            .bgc>p {
+                font-size: 18px;
+            }
+            section>h1{
+                font-size: 20px;
+            }
+            .services{
+                flex:none ;
+                gap: 15px;
+            }
+            section .c1{
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas: 
+                "one one one"
+                "two two two"
+                "three three three";
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="aboutus.html">home</a></li>
+                <li><a href="aboutus.html">about</a></li>
+                <li><a href="aboutus.html">service</a></li>
+                <li><a href="aboutus.html">contect</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="bgc">
+            <h2>welcome to our website</h2>
+            <p>Your solution for web-development and design</p>
+            <button>get started</button>
+        </div>
+    </section>
+    <section>
+        <h1>our services</h1>
+        <div class="service">
+            <div class="services">
+                <h4>web-design</h4>
+                <p>we create stuning, responsive web-site</p>
+            </div>
+            <div class="services">
+                <h4>SEO optimization</h4>
+                <p>increase your visibility with our SEO services</p>
+            </div>
+            <div class="services">
+                <h4>consulting</h4>
+                <p>get professional advice on your digital strategy</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>what our clients say</h1>
+        <div class="c1">
+            <div class="c2">
+                <p>"great service and amazing  results!"</p>
+                <p>-client 1</p>
+            </div>
+            <div class="c3">
+                <p>"very professional and highly recommened."</p>
+                <p>-client 2</p>
+            </div>
+            <div class="c4">
+                <p>"our go-to team for web development projects"</p>
+                <p>-client 3</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 mywebsite. follow us on <a href="#">Facebook </a>, <a href="#">Twitter</a> ,and<a href="#"> linkdin.</a></p>
+    </footer>
+   
+</body>
+
+</html>

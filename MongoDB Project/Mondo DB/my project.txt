@@ -1,0 +1,325 @@
+1 ANS :- Mongo write to command or query. its like a terminal or command prompt.
+2 ANS :- Performs the operation of running and executing a query received from Mongo.
+3 ANS :- MongoDB is a database management system that works by creating and manipulating data. It is a combination of Mongo and MongoDB.
+
+
+# create student database 
+	use student;
+	db.createCollection("student");
+
+# create work database
+	use work;
+	db.createCollection("work");
+
+# create ABCD database
+	use ABCD;
+	db.createCollection("ABCD");
+
+# drop ABCD database
+	db.ABCD.drop("ABCD");
+
+# create collection in student database
+	use student;
+	db.createCollection("student");
+	db.createCollection("student2"); 
+
+# create collection in work database
+	use work;
+	db.createCollection("work");
+	db.createCollection("work2");
+
+# view all databases
+	show databases;
+
+# view collections using databases name
+
+	## student database collection 
+		use student;
+		show collections
+
+	## work database collection
+		use work;
+		show collections;
+
+# delete collection
+
+	## delete student2 collection
+		db.student2.drop();
+	
+	## delete work2 collection
+		db.work2.drop();
+
+# insert document in collection
+   
+	## insert in student collection
+		use student;
+		db.student.insertOne({
+			id:1,
+			name:"Dhruv",
+			age:20,
+			gender:"Male",
+			number:"+911562145326",
+			password:"Dhruv@123"
+		})
+	
+	## insert in work collection
+		use work;
+		db.work.insertOne({
+			id:1,
+			name:"Dhruv",
+			gender:"Male",
+			age:"21",
+			salary:"20000",
+			department:"Sales",
+			email:"dhruv@gmail.com",
+			password:"123456"
+		})
+	
+	## insertMany in student
+		use student;
+		db.student.insertMany([
+			{
+				id:2,
+				name:"Bhakti",
+				age:18,
+				gender:"Female",
+				number:"+914562387456",
+				password:"bhakti@sakariya"
+			},
+			{
+				id:3,
+				name:"Swathi",
+				age:"19",
+				gender:"Female",
+				number:"+913256856145",
+				password:"swathi@makawana"
+			},
+			{
+				id:4,
+				name:"Samir",
+				age:20,
+				gender:"Male",
+				number:"+911123085653",
+				password:"samir@1256"
+			},
+			{	
+				id:5,
+				name:"Diyu",
+				age:"19",
+				gender:"Female",
+				number:"+911200342361",
+				password:"diyu@makawana"
+			}
+		])
+
+	## insertMany in work
+		use work;
+		db.work.insertMany([
+			{
+				id:2,
+				name:"Dharmesh",
+				gender:"Male",
+				age:24,
+				salary:"69000",
+				department:"HR",
+				email:"dharmesh@gmail.com",
+				password:"dharmesh@m"
+			},
+			{
+				id:3,
+				name:"Leo",
+				gender:"Male",
+				age:20,
+				salary:"48000",
+				department:"Engineering",
+				email:"leo@gmail.com",
+				password:"leo@das12"
+			},
+			{
+				id:4,
+				name:"Harpal",
+				gender:"Male",
+				age:16,
+				salary:"58000",
+				department:"Sales",
+				email:"harpal@gmail.com",
+				password:"harpal@z"
+			},
+			{
+				id:5,
+				name:"Samir",
+				gender:"Male",
+				age:19,
+				salary:"72000",
+				department:"Sales",
+				email:"samir@gmail.com",
+				password:"samir@makwana"
+			}
+		])
+	
+# view all document
+   
+	## student document show
+		use student;
+		db.student.find();
+		
+	## work document show
+		use work;
+		db.work.find()
+   
+   
+# search for a document
+   
+	## search document in student
+		use student;
+		db.student.find({name:"Bhakti"});
+
+	## search document in work
+		use work;
+		db.work.find({name:"Samir"});
+
+# use limit
+   
+	## limit use in student
+		use student;
+		db.student.find().limit(2);
+		
+	## limit use in work
+		use work;
+		db.work.find().limit(2);
+
+# use count
+   
+	## count use in student
+		use student;
+		db.student.find().count();
+
+	## count use in work
+		use work;
+		db.work.find().count(); 
+
+# use sort
+   
+	## sort use in student
+		use student;
+		db.student.find().sort({name:1})
+		db.student.find().sort({name:-1})
+
+	## sort use in work
+		use work;
+		db.work.find().sort({salary:1})
+		db.work.find().sort({salary:-1})
+
+# data update using upsert
+   
+	## data update in student
+		use student;
+		db.student.updateOne(
+			{name:"Dhruv"},
+			{$set:{age:21}},
+			{upsert:true}
+		)
+		db.student.updateOne(
+			{name:"Swathi"},
+			{$set:{age:20}},
+			{upsert:true}
+		)
+		db.student.updateOne(
+			{name:"Diyu"},
+			{$set:{age:20}},
+			{upsert:true}
+		)
+		db.student.updateOne(
+			{name:"Swathi"},
+			{$set:{number:"+917531594562"}},
+			{upsert:true}
+		)
+		db.student.updateOne(
+			{name:"Bhakti"},
+			{$set:{age:19}},
+			{upsert:true}
+		)
+
+# inserting data in work using function (like date(), random())
+
+		db.work.insertMany([
+			{
+				name:"pihu",
+				gender:"Female",
+				age:19,
+				salary:"45000",
+				department:"sales",
+				email:"pihu@gmail.com",
+				password:"pihu@gmail.com",
+				sr: Math.random(),
+				date: new Date()
+			},
+			{
+				name:"Dhruvi",
+				gender:"Female",
+				age:19,
+				salary:"50000",
+				department:"sales",
+				email:"dhruvi@gmail.com",
+				password:"dhruvi@gmail.com",
+				sr: Math.random(),
+				date: new Date()
+			},
+			{
+				name:"Piyush",
+				gender:"Male",
+				age:21,
+				salary:"35000",
+				department:"employee",
+				email:"piyush@gmail.com",
+				password:"piyush@gmail.com",
+				sr: Math.random(),
+				date: new Date()
+			},
+			{
+				name:"sumit",
+				gender:"Male",
+				age:20,
+				salary:"32000",
+				department:"CE",
+				email:"sumit@gmail.com",
+				password:"sumit@s",
+				sr: Math.random(),
+				date: new Date()
+			},
+			{
+				name:"meet",
+				gender:"Male",
+				age:20,
+				salary:"39000",
+				department:"CE",
+				email:"meet@gmail.com",
+				password:"Meet@v",
+				sr: Math.random(),
+				date: new Date()
+			},
+			{
+				name:"yash",
+				gender:"Male",
+				age:22,
+				salary:"33500",
+				department:"B.Tech",
+				email:"yash@gmail.com",
+				password:"Yash@123d",
+				sr: Math.random(),
+				date: new Date()
+			}	
+		])
+
+# used operator in work(like $rename,$inc)
+	
+	db.work.updateOne(
+		{name:"meet"},
+		{$rename:{age:"Age"}}
+	)
+	db.work.updateOne(
+		{name:"sumit"},
+		{$inc:{age:3}}
+	)
+	
+	

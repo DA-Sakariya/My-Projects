@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            text-transform: capitalize;
+        }
+
+        header {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 20px;
+        }
+
+        .logo {
+            padding: 10px;
+            margin: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav {
+            padding: 3px 5px;
+            margin: 2px 1px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            /* flex-direction: row; */
+            margin: 5px;
+            padding: 10px 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            padding: 5px;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: azure;
+            padding: 10px;
+            margin: 10px;
+            transition-duration: 0.6s;
+            border-radius: 10px;
+        }
+        
+        a:hover {
+            background-color: rgb(166, 226, 166);
+            color: black;
+        }
+        .bgc {
+            color: rgb(17, 250, 199);
+            font-size: 25px;
+            /* font-weight: bold; */
+            background-image: url("Images/bgc1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .bgc>p {
+            font-size: 18px;
+        }
+
+        .bgc>button {
+            text-transform: capitalize;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightcyan;
+            color: lightcoral;
+            border: none;
+            transition: 0.5s ease-in-out, 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: black;
+            color: red;
+            transform: scale(1.1);
+        }
+        .animation{
+            height: 680px;
+            width: 100%;
+        }
+        section .box{
+            width: 150px;
+            height: 150px;
+            margin: 30px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding-top: 60px;
+            font-size: 19px;
+            font-weight: bold;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 4;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes example{
+            0%{background-color: red;color: white; left: 0; top: 0;}
+            25%{background-color: yellow;color: black; left: 300px; top: 0;}
+            50%{background-color: blue; color: aqua; left: 300px; top: 300px;}
+            75%{background-color: green; color: red; left: 0; top: 300px;}
+            100%{background-color: red; color: white; left: 0; top: 0;}
+        }
+        footer{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 20px 20px;
+        }
+        footer a{
+            text-decoration: none;
+            color: red;
+            border-radius: 3px;
+            transition-duration: 0.5s;
+        }
+        footer a:hover{
+            background-color: white;
+            color: black ;
+        }
+        @media (max-width:768px) {
+            header {
+                font-size: 25px;
+            }
+            
+            .logo {
+                text-align: left;
+            }
+
+            nav>ul {
+                flex-direction: column;
+                text-align: right;
+            }
+
+            .bgc {
+                font-size: 30px;
+                background-size: cover;
+            }
+
+            .bgc>p {
+                font-size: 17px;
+            }
+        }
+        @media (max-width:576px){
+            header {
+                /* text-align: center; */
+                flex-direction: column;
+            }
+
+            .logo {
+                text-align: center;
+            }
+
+            nav>ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bgc {
+                font-size: 20px;
+                background-size: cover;
+            }
+
+            .bgc>p {
+                font-size: 18px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Logo</div>
+            <nav>
+                <ul>
+                    <li><a href="miniproject.html">home</a></li>
+                    <li><a href="miniproject.html">about</a></li>
+                    <li><a href="miniproject.html">service</a></li>
+                    <li><a href="miniproject.html">contect</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div class="bgc">
+                <h2>welcome to about us page</h2>
+                <p>Your solution for web-development and design</p>
+                <button>click here</button>
+            </div>
+        </section>
+        <section class="animation">
+            <div class="box">welcome</div>
+        </section>
+        <footer>
+            <p>&copy; 2024 mywebsite. follow us on <a href="#">Facebook </a>, <a href="#">Twitter</a> ,and<a href="#"> linkdin.</a></p>
+        </footer>
+    </body>
+</html>

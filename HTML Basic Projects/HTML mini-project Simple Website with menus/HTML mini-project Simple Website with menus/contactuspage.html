@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            td{
+                padding: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                transition-duration: 0.4s;
+            }
+            a:hover{
+                background-color: transparent;
+                text-decoration: underline;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="font-family: verdana;">
+        <nav style=" display: flex; justify-content: space-between; padding: 5px; background-color: silver;margin: 5px;">
+            <div style="width: 123px; height: 43px; margin: 2px;  padding: 7px; float: left;">
+                <img src="Images/logo.png" alt="poojara" width="120" height="40">
+            </div>
+            <div style="width: 365px; height: 53px; margin-left: 755px; float: left; padding: 10px;">
+                <table>
+                    <tr>
+                        <td><a href="homepage.html" >Home</a></td>
+                        <td><a href="aboutus.html" >About us</a></td>
+                        <td><a href="phones.html" >phones</a></td>
+                        <td><ins><a href="contactuspage.html">Contact Us</a></ins></td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+        <div style="width: 100%; height: 650px; padding: 5px; margin: 5px; background-color: chocolate;">
+            <center><form action="/submit" method="post">
+                <label for="name" style=" color: white;">Name</label>
+                <input type="text" id="name" class="name" name="name" style="margin-left: 90px;" size="25" required><br><br>
+                <label for="phoneno" style="color: white;">Phone Number</label>
+                <input type="tel" id="phoneno" class="phoneno" name="phoneno" pattern="[0-9]{5}-[0-9]{5}" required size="25" style="margin-left: 18px;"><br><br>
+                <label for="email" style="color: white;">Email Id</label>
+                <input type="email" id="email" class="email" name="email" required size="25" style="margin-left: 70px;"><br><br>
+                <label for="gender" style="color: white;">Gender</label>
+                <input type="radio" id="male" class="gender" name="male" style="margin-left: 65px;">
+                <label for="male" style="color: white;">Male</label>
+                <input type="radio" id="female" class="gender" name="female">
+                <label for="female" style="color: white;">Female</label>
+                <input type="radio" id="other" class="gender" name="other">
+                <label for="other" style="color: white;">Other</label><br><br>
+                <label for="country" style="color: white;">Country</label>
+                <select name="country" id="country" class="country" style="margin-left: 75px;">
+                    <option value="india">India</option>
+                    <option value="chaina">Chaina</option>
+                    <option value="japan">Japan</option>
+                    <option value="england">England</option>
+                </select><br><br>
+                <label for="address" style="color: white;">Address</label><br>
+                <textarea name="address" id="address" class="address" cols="49" rows="10"></textarea><br><br>
+                <label for="comment" style="color: white;">Comment</label><br>
+                <textarea name="comment" id="comment" class="comment" cols="49" rows="10"></textarea><br><br>
+                <input type="submit" value="submit">
+                <input type="reset" value="Reset">
+            </form></center>
+        </div>
+        <div style="width: 100%; height: 30px; margin: 5px; padding: 5px; background-color:chocolate; color: black; margin-top: 3px;position:absolute;font-size: 13px;">
+            <p style="width: 485px; height: 28px; padding: 2px; margin: 3px;">&#169;2023 poojara telecome Pvt Ltd All Rights Reserved</p>    
+        </div>
+    </body>
+</html>

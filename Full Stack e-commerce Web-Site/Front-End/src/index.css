@@ -1,0 +1,583 @@
+/* Headers.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #1e272e; /* Dark Midnight Blue */
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #00d8d6;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-family: 'Segoe UI';
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+   color: #00d8d6;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-family: 'Segoe UI';
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.logout-button:hover {
+  color: #00d8d6;
+  background-color: transparent;
+}
+
+
+
+/* Signup Page */
+.signup-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 35px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup-container h2 {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signup-form input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.signup-form input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+  background-color: #fff;
+  outline: none;
+}
+
+.signup-form button {
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-form button:hover {
+  background-color: #16a085;
+  transform: scale(1.02);
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+.special-page {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.special-page h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1abc9c;
+  margin-bottom: 20px;
+}
+
+.special-page p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+
+/* error Page */
+.error-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f5f6fa;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.error-container h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.error-container p {
+  font-size: 1.3rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.back-home-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #16a085;
+}
+
+/* Login Page Styling */
+.login-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 35px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container h2 {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.login-form input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+  background-color: #fff;
+  outline: none;
+}
+
+.login-form button {
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form button:hover {
+  background-color: #16a085;
+  transform: scale(1.02);
+}
+
+/* Add products Page */
+.add-product-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 35px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-product-container h2 {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.add-product-form input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.add-product-form input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+  background-color: #fff;
+  outline: none;
+}
+
+.add-product-form button {
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-product-form button:hover {
+  background-color: #16a085;
+  transform: scale(1.02);
+}
+
+/* products page */
+.product-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 35px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.product-container input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  margin: 20px auto 30px;
+  display: block;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-container input[type="text"]:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+  background-color: #fff;
+  outline: none;
+}
+
+
+.product-header,
+.product-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr 1fr 1fr 120px; /* Added space for button */
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  list-style: none;
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+.product-header {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #2c3e50;
+  border-radius: 8px;
+}
+
+.product-row:hover {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.delete-button {
+  padding: 8px 14px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.update-button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.update-button:hover {
+  background-color: #16a085;
+}
+
+
+.no-products {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Update Form */
+.update-product-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 35px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.update-product-container h2 {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.update-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.update-product-form input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.update-product-form input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+  background-color: #fff;
+  outline: none;
+}
+
+.update-product-form button {
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.update-product-form button:hover {
+  background-color: #16a085;
+  transform: scale(1.02);
+}
+
+
+/* Optional error styling */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 80vh;
+  background-color: var(--bg, #f5f6fa);
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.profile-actions button {
+  padding: 12px 24px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.profile-actions button:hover {
+  background-color: #16a085;
+}
+
+
+/* Footer.css */
+
+.footer {
+  background-color: #1e272e; /* Darker for better contrast */
+  color: #f1f1f1;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 1rem;
+  margin-top: auto;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer p {
+  margin: 5px 0;
+  letter-spacing: 0.5px;
+}
+
+.footer a {
+  color: #1abc9c;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+/* layout css */
+/* Ensure full page height layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main grows to fill available space */
+.main-content {
+  flex: 1;
+}

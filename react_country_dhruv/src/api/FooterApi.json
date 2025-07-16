@@ -1,0 +1,18 @@
+[
+    {
+      "icon": "MdPlace",
+      "title": "Find us",
+      "details": "Rajkot, Gujarat"
+    },
+    {
+      "icon": "IoCallSharp",
+      "title": "Call us",
+      "details": "0123456789"
+    },
+    {
+      "icon": "TbMailPlus",
+      "title": "Mail us",
+      "details": "contact@gmail.com"
+    }
+]
+  
